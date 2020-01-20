@@ -16,6 +16,14 @@ spring:
 
     open-in-view: false
 
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: #gcp oauth client-id
+            client-secret: #gcp oauth client-secret
+
 logging:
   level:
     org:
