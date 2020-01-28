@@ -16,6 +16,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login()
-                .loginPage("/login");
+                .loginPage("/login")
+                .defaultSuccessUrl("/secret");
     }
 }
