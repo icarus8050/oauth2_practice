@@ -9,6 +9,14 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private final String authEndpoint = "https://accounts.google.com/o/oauth2/v2/auth?" +
+            "access_type=offline" +
+            "&scope=email profile" +
+            "&access_type=offline" +
+            "&redirect_uri=https%3A//localhost:8080/login/oauth2/code/google" +
+            "&response_type=code" +
+            "&client_id=172617982905-7909d5ec8d0el4kf6114jn21a4q1eu4j.apps.googleusercontent.com";
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
