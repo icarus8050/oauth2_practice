@@ -63,9 +63,6 @@ public class ViewController {
                         authentication.getAuthorizedClientRegistrationId(),
                         authentication.getName());
 
-        log.info("access Token => {}", client.getAccessToken());
-        log.info("refresh Token => {}", client.getRefreshToken());
-
         String userInfoEndpointUri = client.getClientRegistration()
                 .getProviderDetails().getUserInfoEndpoint().getUri();
 
